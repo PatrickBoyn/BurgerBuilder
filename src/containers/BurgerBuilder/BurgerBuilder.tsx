@@ -1,11 +1,11 @@
 import React, {Component} from "react";
 import Auxillary from '../../hoc/Auxillary';
-
+import Burger from '../../components/Burger/Burger'
 class BurgerBuilder extends Component{
     render(): React.ReactElement<any, string > {
         return (
             <Auxillary>
-                <div>Burger</div>
+                <Burger/>
                 <div>Controls</div>
             </Auxillary>
         );
