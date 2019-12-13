@@ -12,7 +12,7 @@ const BurgerIngredient = (props: any) => {
              ingredient = (
                  <div className={classes.BreadTop}>
                      <div className={classes.Seeds1}></div>
-                     <div className={classes.Seeds1}></div>
+                     <div className={classes.Seeds2}></div>
                  </div>
              );
              break;
