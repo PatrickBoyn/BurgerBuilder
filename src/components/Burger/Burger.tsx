@@ -1,9 +1,6 @@
 import React from 'react';
 
-type Props = {
-
-};
- export const Burger = (props: Props) => {
+const Burger = (props: string) => {
     return (
         <div>
 
