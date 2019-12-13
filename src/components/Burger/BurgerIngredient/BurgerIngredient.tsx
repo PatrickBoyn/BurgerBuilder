@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './BurgerIngredient.module.css';
 
-const BurgerIngredient = (props: string) => {
+const BurgerIngredient = (props: any) => {
      let ingredient;
 
      switch (props) {
