@@ -2,8 +2,12 @@ import React from 'react';
 import classes from './Burger.module.css'
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
 
-const Burger = (props: any) => {
-    let transformedIngredients: any = Object.keys(props.ingredients)
+interface Ingredients {
+    ingredients: {[name: string]: number}
+}
+
+const Burger = (props: Ingredients): JSX.Element => {
+    let transformedIngredients: JSX.Element[] = Object.keys(props.ingredients)
         .map(ingredientKey => {
             return [...Array(props.ingredients[ingredientKey])].map((_, i) => {
                 return <BurgerIngredient key={ingredientKey + i} type={ingredientKey}/>
@@ -13,7 +17,8 @@ const Burger = (props: any) => {
             return array.concat(element);
         }, []);
     if (transformedIngredients.length === 0){
-        transformedIngredients = <p>Please add an ingredient!</p>
+        // Not sure if this is correct, but it seemed the logical thing to try.
+        transformedIngredients[0] = <p>Please add an ingredient!</p>
     }
     return (
         <div className={classes.Burger}>
