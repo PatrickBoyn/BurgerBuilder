@@ -2,13 +2,17 @@ import React, {Component} from "react";
 import Auxiliary from '../../hoc/Auxiliary';
 import Burger from '../../components/Burger/Burger'
 
+interface Ingredients {
+    ingredients: {[name: string]: number};
+}
+
 class BurgerBuilder extends Component{
-    state = {
+    state: Ingredients = {
         ingredients: {
-            salad: 0,
-            bacon: 0,
-            cheese: 0,
-            meat: 0,
+            'salad': 0,
+            'bacon': 0,
+            'cheese': 0,
+            'meat': 0,
         }
     };
 
