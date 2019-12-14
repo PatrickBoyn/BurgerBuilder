@@ -1,4 +1,3 @@
-// import React from "react";
 
 const auxiliary = (props: any) => props.children;
 
