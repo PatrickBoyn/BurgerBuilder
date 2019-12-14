@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './BurgerIngredient.module.css';
 
 const BurgerIngredient = (props: any) => {
-     let ingredient;
+     let ingredient: JSX.Element | null;
 
      switch (props.type) {
          case('bread-bottom'):
